@@ -57,4 +57,4 @@ build/
 .vscode/
 
 ### Bot token ###
-TOKEN.txt
+src/main/resources/TOKEN.txt
