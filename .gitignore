@@ -58,3 +58,5 @@ build/
 
 ### Bot token ###
 src/main/resources/TOKEN.txt
+
+src/test/
