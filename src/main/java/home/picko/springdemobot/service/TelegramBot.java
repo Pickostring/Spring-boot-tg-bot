@@ -28,8 +28,10 @@ import java.util.List;
 public class TelegramBot extends TelegramLongPollingBot {
 
     static final String HELP_TEXT = "Help text";
+    static final String M_BUTTON = "M_BUTTON";
     static final String E_BUTTON = "E_BUTTON";
     static final String S_BUTTON = "S_BUTTON";
+    static final String SP_BUTTON = "SP_BUTTON";
     static final String I_BUTTON = "I_BUTTON";
     static final String MT_BUTTON = "MT_BUTTON";
     static final String H_BUTTON = "H_BUTTON";
@@ -94,7 +96,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             long messageId = update.getCallbackQuery().getMessage().getMessageId();
             long chatId = update.getCallbackQuery().getMessage().getChatId();
 
-            if(callbackData.equals("M_BUTTON")) {
+            if(callbackData.equals(M_BUTTON)) {
 
                 SendMessage message = new SendMessage();
                 message.setChatId(String.valueOf(chatId));
@@ -102,34 +104,144 @@ public class TelegramBot extends TelegramLongPollingBot {
 
                 InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
                 List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-                List<InlineKeyboardButton> rowInline = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
 
-                var buttonM428_1 = new InlineKeyboardButton();
+                var buttonM422_1 = new InlineKeyboardButton();
 
-                buttonM428_1.setText("М428-1");
-                buttonM428_1.setCallbackData("M428_1_BUTTON");
+                buttonM422_1.setText("М422_1");
+                buttonM422_1.setCallbackData("M422_1_BUTTON");
 
-                var buttonM428_2 = new InlineKeyboardButton();
+                var buttonM422_2 = new InlineKeyboardButton();
 
-                buttonM428_2.setText("М428-2");
-                buttonM428_2.setCallbackData("M428_2_BUTTON");
+                buttonM422_2.setText("М422_2");
+                buttonM422_2.setCallbackData("M422_2_BUTTON");
 
-                rowInline.add(buttonM428_1);
-                rowInline.add(buttonM428_2);
+                var buttonM428 = new InlineKeyboardButton();
 
-                rowsInline.add(rowInline);
+                buttonM428.setText("М428");
+                buttonM428.setCallbackData("M428_BUTTON");
+
+                var buttonM524 = new InlineKeyboardButton();
+
+                buttonM524.setText("М524");
+                buttonM524.setCallbackData("M524_BUTTON");
+
+                var buttonM526 = new InlineKeyboardButton();
+
+                buttonM526.setText("М526");
+                buttonM526.setCallbackData("M526_BUTTON");
+
+                var buttonM527 = new InlineKeyboardButton();
+
+                buttonM527.setText("М527");
+                buttonM527.setCallbackData("M527_BUTTON");
+
+                var buttonM538 = new InlineKeyboardButton();
+
+                buttonM538.setText("М538");
+                buttonM538.setCallbackData("M538_BUTTON");
+
+                rowInline_1.add(buttonM422_1);
+                rowInline_1.add(buttonM422_2);
+                rowInline_1.add(buttonM428);
+                rowInline_1.add(buttonM524);
+                rowInline_2.add(buttonM526);
+                rowInline_2.add(buttonM527);
+                rowInline_2.add(buttonM538);
+
+                rowsInline.add(rowInline_1);
+                rowsInline.add(rowInline_2);
 
                 markupInline.setKeyboard(rowsInline);
                 message.setReplyMarkup(markupInline);
 
                 executeMessage(message);
 
-            } else if (callbackData.equals("M428_1_BUTTON")) {
+            } else if (callbackData.equals("M422_1_BUTTON")) {
 
-                if (cameraRepository.existsById("М428-1")) {
+                if (cameraRepository.existsById("М422_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М428-1"));
+                    String text = String.valueOf(cameraRepository.findById("М422_1"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M422_2_BUTTON")) {
+
+                if (cameraRepository.existsById("М422_2")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М422_2"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M428_BUTTON")) {
+
+                if (cameraRepository.existsById("М428")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М428"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M524_BUTTON")) {
+
+                if (cameraRepository.existsById("М524")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М524"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M526_BUTTON")) {
+
+                if (cameraRepository.existsById("М526")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М526"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M527_BUTTON")) {
+
+                if (cameraRepository.existsById("М527")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М527"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("M538_BUTTON")) {
+
+                if (cameraRepository.existsById("М538")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("М538"));
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -139,13 +251,342 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             } else if (callbackData.equals(E_BUTTON)) {
 
-                String text = "Вы выбрали Э";
-                executeEditMessageText(text, chatId, messageId);
+                SendMessage message = new SendMessage();
+                message.setChatId(String.valueOf(chatId));
+                message.setText("Выберите аудиторию");
+
+                InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+                List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_3 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_4 = new ArrayList<>();
+
+                var buttonE404 = new InlineKeyboardButton();
+
+                buttonE404.setText("Э404");
+                buttonE404.setCallbackData("Э404_BUTTON");
+
+                var buttonE406 = new InlineKeyboardButton();
+
+                buttonE406.setText("Э406");
+                buttonE406.setCallbackData("Э406_BUTTON");
+
+                var buttonE503 = new InlineKeyboardButton();
+
+                buttonE503.setText("Э503");
+                buttonE503.setCallbackData("Э503_BUTTON");
+
+                var buttonE507 = new InlineKeyboardButton();
+
+                buttonE507.setText("Э507");
+                buttonE507.setCallbackData("Э507_BUTTON");
+
+                var buttonE509 = new InlineKeyboardButton();
+
+                buttonE509.setText("Э509");
+                buttonE509.setCallbackData("Э509_BUTTON");
+
+                var buttonE511 = new InlineKeyboardButton();
+
+                buttonE511.setText("Э511");
+                buttonE511.setCallbackData("Э511_BUTTON");
+
+                var buttonE513 = new InlineKeyboardButton();
+
+                buttonE513.setText("Э513");
+                buttonE513.setCallbackData("Э513_BUTTON");
+
+                var buttonE514 = new InlineKeyboardButton();
+
+                buttonE514.setText("Э514");
+                buttonE514.setCallbackData("Э514_BUTTON");
+
+                var buttonE517 = new InlineKeyboardButton();
+
+                buttonE517.setText("Э517");
+                buttonE517.setCallbackData("Э517_BUTTON");
+
+                var buttonE518 = new InlineKeyboardButton();
+
+                buttonE518.setText("Э518");
+                buttonE518.setCallbackData("Э518_BUTTON");
+
+                var buttonE519 = new InlineKeyboardButton();
+
+                buttonE519.setText("Э519");
+                buttonE519.setCallbackData("Э519_BUTTON");
+
+                var buttonE520 = new InlineKeyboardButton();
+
+                buttonE520.setText("Э520");
+                buttonE520.setCallbackData("Э520_BUTTON");
+
+                var buttonE522 = new InlineKeyboardButton();
+
+                buttonE522.setText("Э522");
+                buttonE522.setCallbackData("Э522_BUTTON");
+
+                rowInline_1.add(buttonE404);
+                rowInline_1.add(buttonE406);
+                rowInline_1.add(buttonE503);
+                rowInline_1.add(buttonE507);
+                rowInline_2.add(buttonE509);
+                rowInline_2.add(buttonE511);
+                rowInline_2.add(buttonE513);
+                rowInline_2.add(buttonE514);
+                rowInline_3.add(buttonE517);
+                rowInline_3.add(buttonE518);
+                rowInline_3.add(buttonE519);
+                rowInline_3.add(buttonE520);
+                rowInline_4.add(buttonE522);
+
+                rowsInline.add(rowInline_1);
+                rowsInline.add(rowInline_2);
+                rowsInline.add(rowInline_3);
+                rowsInline.add(rowInline_4);
+
+                markupInline.setKeyboard(rowsInline);
+                message.setReplyMarkup(markupInline);
+
+                executeMessage(message);
+
+            } else if (callbackData.equals("Э404_BUTTON")) {
+
+                if (cameraRepository.existsById("Э404")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э404"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э406_BUTTON")) {
+
+                if (cameraRepository.existsById("Э406")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э406"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э503_BUTTON")) {
+
+                if (cameraRepository.existsById("Э503")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э503"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э507_BUTTON")) {
+
+                if (cameraRepository.existsById("Э507")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э507"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            }  else if (callbackData.equals("Э509_BUTTON")) {
+
+                if (cameraRepository.existsById("Э509")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э509"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э511_BUTTON")) {
+
+                if (cameraRepository.existsById("Э511")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э511"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э513_BUTTON")) {
+
+                if (cameraRepository.existsById("Э513")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э513"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э514_BUTTON")) {
+
+                if (cameraRepository.existsById("Э514")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э514"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э517_BUTTON")) {
+
+                if (cameraRepository.existsById("Э517")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э517"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э518_BUTTON")) {
+
+                if (cameraRepository.existsById("Э518")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э518"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э519_BUTTON")) {
+
+                if (cameraRepository.existsById("Э519")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э519"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э520_BUTTON")) {
+
+                if (cameraRepository.existsById("Э520")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э520"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Э522_BUTTON")) {
+
+                if (cameraRepository.existsById("Э522")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = String.valueOf(cameraRepository.findById("Э522"));
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
 
             } else if (callbackData.equals(S_BUTTON)) {
 
-                String text = "Вы выбрали С";
-                executeEditMessageText(text, chatId, messageId);
+                SendMessage message = new SendMessage();
+                message.setChatId(String.valueOf(chatId));
+                message.setText("Выберите аудиторию");
+
+                InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+                List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
+
+                var buttonS305 = new InlineKeyboardButton();
+
+                buttonS305.setText("С305");
+                buttonS305.setCallbackData("С305_BUTTON");
+
+                var buttonS306 = new InlineKeyboardButton();
+
+                buttonS306.setText("С306");
+                buttonS306.setCallbackData("С306_BUTTON");
+
+                var buttonS309 = new InlineKeyboardButton();
+
+                buttonS309.setText("С309");
+                buttonS309.setCallbackData("С309_BUTTON");
+
+                var buttonS312 = new InlineKeyboardButton();
+
+                buttonS312.setText("С312");
+                buttonS312.setCallbackData("С312_BUTTON");
+
+                var buttonS416 = new InlineKeyboardButton();
+
+                buttonS416.setText("С416");
+                buttonS416.setCallbackData("С416_BUTTON");
+
+                var buttonS418 = new InlineKeyboardButton();
+
+                buttonS418.setText("С418");
+                buttonS418.setCallbackData("С418_BUTTON");
+
+                var buttonS430 = new InlineKeyboardButton();
+
+                buttonS430.setText("С430");
+                buttonS430.setCallbackData("С430_BUTTON");
+
+                var buttonS431 = new InlineKeyboardButton();
+
+                buttonS431.setText("С431");
+                buttonS431.setCallbackData("С431_BUTTON");
+
+                rowInline_1.add(buttonS305);
+                rowInline_1.add(buttonS306);
+                rowInline_1.add(buttonS309);
+                rowInline_1.add(buttonS312);
+                rowInline_2.add(buttonS416);
+                rowInline_2.add(buttonS418);
+                rowInline_2.add(buttonS430);
+                rowInline_2.add(buttonS431);
+
+                rowsInline.add(rowInline_1);
+                rowsInline.add(rowInline_2);
+
+                markupInline.setKeyboard(rowsInline);
+                message.setReplyMarkup(markupInline);
+
+                executeMessage(message);
 
             } else if (callbackData.equals(I_BUTTON)) {
 
@@ -202,12 +643,13 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-        List<InlineKeyboardButton> rowInline = new ArrayList<>();
+        List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+        List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
 
         var buttonM = new InlineKeyboardButton();
 
         buttonM.setText("М");
-        buttonM.setCallbackData("M_BUTTON");
+        buttonM.setCallbackData(M_BUTTON);
 
         var buttonE = new InlineKeyboardButton();
 
@@ -218,6 +660,11 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         buttonS.setText("С");
         buttonS.setCallbackData(S_BUTTON);
+
+        var buttonSP = new InlineKeyboardButton();
+
+        buttonSP.setText("СП");
+        buttonSP.setCallbackData(SP_BUTTON);
 
         var buttonI = new InlineKeyboardButton();
 
@@ -239,15 +686,17 @@ public class TelegramBot extends TelegramLongPollingBot {
         buttonFT.setText("ФТ");
         buttonFT.setCallbackData(FT_BUTTON);
 
-        rowInline.add(buttonM);
-        rowInline.add(buttonE);
-        rowInline.add(buttonS);
-        rowInline.add(buttonI);
-        rowInline.add(buttonMT);
-        rowInline.add(buttonH);
-        rowInline.add(buttonFT);
+        rowInline_1.add(buttonM);
+        rowInline_1.add(buttonE);
+        rowInline_1.add(buttonS);
+        rowInline_1.add(buttonSP);
+        rowInline_2.add(buttonI);
+        rowInline_2.add(buttonMT);
+        rowInline_2.add(buttonH);
+        rowInline_2.add(buttonFT);
 
-        rowsInline.add(rowInline);
+        rowsInline.add(rowInline_1);
+        rowsInline.add(rowInline_2);
 
         markupInline.setKeyboard(rowsInline);
         message.setReplyMarkup(markupInline);
