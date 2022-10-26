@@ -22,6 +22,8 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Slf4j
 @Component
@@ -163,7 +165,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М422_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М422_1"));
+                    String text = clearAnswerText("М422_1");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -176,7 +178,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М422_2")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М422_2"));
+                    String text = clearAnswerText("М422_2");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -189,7 +191,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М428")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М428"));
+                    String text = clearAnswerText("М428");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -202,7 +204,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М524")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М524"));
+                    String text = clearAnswerText("М524");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -215,7 +217,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М526")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М526"));
+                    String text = clearAnswerText("М526");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -228,7 +230,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М527")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М527"));
+                    String text = clearAnswerText("М527");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -241,7 +243,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("М538")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("М538"));
+                    String text = clearAnswerText("М538");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -356,7 +358,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э404")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э404"));
+                    String text = clearAnswerText("Э404");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -369,7 +371,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э406")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э406"));
+                    String text = clearAnswerText("Э406");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -382,7 +384,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э503")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э503"));
+                    String text = clearAnswerText("Э503");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -395,7 +397,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э507")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э507"));
+                    String text = clearAnswerText("Э507");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -408,7 +410,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э509")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э509"));
+                    String text = clearAnswerText("Э509");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -421,7 +423,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э511")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э511"));
+                    String text = clearAnswerText("Э511");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -434,7 +436,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э513")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э513"));
+                    String text = clearAnswerText("Э513");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -447,7 +449,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э514")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э514"));
+                    String text = clearAnswerText("Э514");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -460,7 +462,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э517")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э517"));
+                    String text = clearAnswerText("Э517");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -473,7 +475,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э518")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э518"));
+                    String text = clearAnswerText("Э518");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -486,7 +488,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э519")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э519"));
+                    String text = clearAnswerText("Э519");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -499,7 +501,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э520")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э520"));
+                    String text = clearAnswerText("Э520");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -512,7 +514,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("Э522")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("Э522"));
+                    String text = clearAnswerText("Э522");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -593,7 +595,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С305")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С305"));
+                    String text = clearAnswerText("С305");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -606,7 +608,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С306")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С306"));
+                    String text = clearAnswerText("С306");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -619,7 +621,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С309")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С309"));
+                    String text = clearAnswerText("С309");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -632,7 +634,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С312")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С312"));
+                    String text = clearAnswerText("С312");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -645,7 +647,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С416")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С416"));
+                    String text = clearAnswerText("С416");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -658,7 +660,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С418")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С418"));
+                    String text = clearAnswerText("С418");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -671,7 +673,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С430")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С430"));
+                    String text = clearAnswerText("С430");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -684,7 +686,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("С431")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("С431"));
+                    String text = clearAnswerText("С431");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -773,7 +775,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП401")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП401"));
+                    String text = clearAnswerText("СП401");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -786,7 +788,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП402")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП402"));
+                    String text = clearAnswerText("СП402");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -799,7 +801,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП403")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП403"));
+                    String text = clearAnswerText("СП403");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -812,7 +814,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП404")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП404"));
+                    String text = clearAnswerText("СП404");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -825,7 +827,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП406")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП406"));
+                    String text = clearAnswerText("СП406");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -838,7 +840,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП501_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП501_1"));
+                    String text = clearAnswerText("СП501_1");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -851,7 +853,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП501_2")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП501_2"));
+                    String text = clearAnswerText("СП501_2");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -864,7 +866,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП502_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП502_1"));
+                    String text = clearAnswerText("СП502_1");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -877,7 +879,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("СП502_2")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("СП502_2"));
+                    String text = clearAnswerText("СП502_2");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -984,7 +986,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И156_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И156_1"));
+                    String text = clearAnswerText("И156_1");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -998,7 +1000,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("156_2")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("156_2"));
+                    String text = clearAnswerText("156_2");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1011,7 +1013,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И308")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И308"));
+                    String text = clearAnswerText("И308");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1024,7 +1026,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И310")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И310"));
+                    String text = clearAnswerText("И310");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1037,7 +1039,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И329")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И329"));
+                    String text = clearAnswerText("И329");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1050,7 +1052,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И333")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И333"));
+                    String text = clearAnswerText("И333");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1063,7 +1065,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И335")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И335"));
+                    String text = clearAnswerText("И335");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1076,7 +1078,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И431")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И431"));
+                    String text = clearAnswerText("И431");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1089,7 +1091,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И526")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И526"));
+                    String text = clearAnswerText("И526");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1102,7 +1104,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И532")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И532"));
+                    String text = clearAnswerText("И532");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1115,7 +1117,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И534")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И534"));
+                    String text = clearAnswerText("И534");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1128,7 +1130,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("И535")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("И535"));
+                    String text = clearAnswerText("И535");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1307,7 +1309,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ139")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ139"));
+                    String text = clearAnswerText("МТ139");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1320,7 +1322,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ143")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ143"));
+                    String text = clearAnswerText("МТ143");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1333,7 +1335,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ149")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ149"));
+                    String text = clearAnswerText("МТ149");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1346,7 +1348,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ151")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ151"));
+                    String text = clearAnswerText("МТ151");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1359,7 +1361,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ204")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ204"));
+                    String text = clearAnswerText("МТ204");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1372,7 +1374,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ213")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ213"));
+                    String text = clearAnswerText("МТ213");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1385,7 +1387,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ311")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ311"));
+                    String text = clearAnswerText("МТ311");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1398,7 +1400,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ312")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ312"));
+                    String text = clearAnswerText("МТ312");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1411,7 +1413,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ314_1")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ314_1"));
+                    String text = clearAnswerText("МТ314_1");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1424,7 +1426,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ314_2")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ314_2"));
+                    String text = clearAnswerText("МТ314_2");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1437,7 +1439,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ320")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ320"));
+                    String text = clearAnswerText("МТ320");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1450,7 +1452,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ404")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ404"));
+                    String text = clearAnswerText("МТ404");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1463,7 +1465,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ405")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ405"));
+                    String text = clearAnswerText("МТ405");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1476,7 +1478,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ406")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ406"));
+                    String text = clearAnswerText("МТ406");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1489,7 +1491,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ407")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ407"));
+                    String text = clearAnswerText("МТ407");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1502,7 +1504,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ408")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ408"));
+                    String text = clearAnswerText("МТ408");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1515,7 +1517,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ409")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ409"));
+                    String text = clearAnswerText("МТ409");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1528,7 +1530,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ412")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ412"));
+                    String text = clearAnswerText("МТ412");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1541,7 +1543,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ413")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ413"));
+                    String text = clearAnswerText("МТ413");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1554,7 +1556,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ414")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ414"));
+                    String text = clearAnswerText("МТ414");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1567,7 +1569,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ415")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ415"));
+                    String text = clearAnswerText("МТ415");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1580,7 +1582,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ421")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ421"));
+                    String text = clearAnswerText("МТ421");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1593,7 +1595,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                 if (cameraRepository.existsById("МТ424")) {
 
                     SendMessage message = new SendMessage();
-                    String text = String.valueOf(cameraRepository.findById("МТ424"));
+                    String text = clearAnswerText("МТ424");
                     message.setChatId(String.valueOf(chatId));
                     message.setText(text);
 
@@ -1603,13 +1605,370 @@ public class TelegramBot extends TelegramLongPollingBot {
 
             } else if (callbackData.equals(H_BUTTON)) {
 
-                String text = "Вы выбрали Х";
-                executeEditMessageText(text, chatId, messageId);
+                SendMessage message = new SendMessage();
+                message.setChatId(String.valueOf(chatId));
+                message.setText("Выберите аудиторию");
+
+                InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+                List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
+
+                var buttonH242 = new InlineKeyboardButton();
+
+                buttonH242.setText("Х242");
+                buttonH242.setCallbackData("Х242_BUTTON");
+
+                var buttonH306 = new InlineKeyboardButton();
+
+                buttonH306.setText("Х306");
+                buttonH306.setCallbackData("Х306_BUTTON");
+
+                var buttonH402 = new InlineKeyboardButton();
+
+                buttonH402.setText("Х402");
+                buttonH402.setCallbackData("Х402_BUTTON");
+
+                var buttonH405 = new InlineKeyboardButton();
+
+                buttonH405.setText("Х405");
+                buttonH405.setCallbackData("Х405_BUTTON");
+
+                var buttonH407 = new InlineKeyboardButton();
+
+                buttonH407.setText("Х407");
+                buttonH407.setCallbackData("Х407_BUTTON");
+
+                var buttonH500 = new InlineKeyboardButton();
+
+                buttonH500.setText("Х500");
+                buttonH500.setCallbackData("Х500_BUTTON");
+
+                rowInline_1.add(buttonH242);
+                rowInline_1.add(buttonH306);
+                rowInline_1.add(buttonH402);
+                rowInline_1.add(buttonH405);
+                rowInline_2.add(buttonH407);
+                rowInline_2.add(buttonH500);
+
+                rowsInline.add(rowInline_1);
+                rowsInline.add(rowInline_2);
+
+                markupInline.setKeyboard(rowsInline);
+                message.setReplyMarkup(markupInline);
+
+                executeMessage(message);
+
+            } else if (callbackData.equals("Х242_BUTTON")) {
+
+                if (cameraRepository.existsById("Х242")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х242");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            }
+            else if (callbackData.equals("Х306_BUTTON")) {
+
+                if (cameraRepository.existsById("Х306")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х306");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Х402_BUTTON")) {
+
+                if (cameraRepository.existsById("Х402")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х402");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Х405_BUTTON")) {
+
+                if (cameraRepository.existsById("Х405")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х405");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Х407_BUTTON")) {
+
+                if (cameraRepository.existsById("Х407")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х407");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("Х500_BUTTON")) {
+
+                if (cameraRepository.existsById("Х500")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("Х500");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
 
             } else if (callbackData.equals(FT_BUTTON)) {
 
-                String text = "Вы выбрали ФТ";
-                executeEditMessageText(text, chatId, messageId);
+                SendMessage message = new SendMessage();
+                message.setChatId(String.valueOf(chatId));
+                message.setText("Выберите аудиторию");
+
+                InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+                List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_1 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_2 = new ArrayList<>();
+                List<InlineKeyboardButton> rowInline_3 = new ArrayList<>();
+
+                var buttonFT201_1 = new InlineKeyboardButton();
+
+                buttonFT201_1.setText("ФТ201_1");
+                buttonFT201_1.setCallbackData("ФТ201_1_BUTTON");
+
+                var buttonFT201_2 = new InlineKeyboardButton();
+
+                buttonFT201_2.setText("ФТ201_2");
+                buttonFT201_2.setCallbackData("ФТ201_2_BUTTON");
+
+                var buttonFT401 = new InlineKeyboardButton();
+
+                buttonFT401.setText("ФТ401");
+                buttonFT401.setCallbackData("ФТ401_BUTTON");
+
+                var buttonFT403 = new InlineKeyboardButton();
+
+                buttonFT403.setText("ФТ403");
+                buttonFT403.setCallbackData("ФТ403_BUTTON");
+
+                var buttonFT404 = new InlineKeyboardButton();
+
+                buttonFT404.setText("ФТ404");
+                buttonFT404.setCallbackData("ФТ404_BUTTON");
+
+                var buttonFT406 = new InlineKeyboardButton();
+
+                buttonFT406.setText("ФТ406");
+                buttonFT406.setCallbackData("ФТ406_BUTTON");
+
+                var buttonFT414 = new InlineKeyboardButton();
+
+                buttonFT414.setText("ФТ414");
+                buttonFT414.setCallbackData("ФТ414_BUTTON");
+
+                var buttonFT416 = new InlineKeyboardButton();
+
+                buttonFT416.setText("ФТ416");
+                buttonFT416.setCallbackData("ФТ416_BUTTON");
+
+                var buttonFT417 = new InlineKeyboardButton();
+
+                buttonFT417.setText("ФТ417");
+                buttonFT417.setCallbackData("ФТ417_BUTTON");
+
+                var buttonFT419 = new InlineKeyboardButton();
+
+                buttonFT419.setText("ФТ419");
+                buttonFT419.setCallbackData("ФТ419_BUTTON");
+
+                var buttonFT425 = new InlineKeyboardButton();
+
+                buttonFT425.setText("ФТ425");
+                buttonFT425.setCallbackData("ФТ425_BUTTON");
+
+                rowInline_1.add(buttonFT201_1);
+                rowInline_1.add(buttonFT201_2);
+                rowInline_1.add(buttonFT401);
+                rowInline_1.add(buttonFT403);
+                rowInline_2.add(buttonFT404);
+                rowInline_2.add(buttonFT406);
+                rowInline_2.add(buttonFT414);
+                rowInline_2.add(buttonFT416);
+                rowInline_3.add(buttonFT417);
+                rowInline_3.add(buttonFT419);
+                rowInline_3.add(buttonFT425);
+
+                rowsInline.add(rowInline_1);
+                rowsInline.add(rowInline_2);
+                rowsInline.add(rowInline_3);
+
+                markupInline.setKeyboard(rowsInline);
+                message.setReplyMarkup(markupInline);
+
+                executeMessage(message);
+
+            } else if (callbackData.equals("ФТ201_1_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ201_1")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ201_1");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            }
+            else if (callbackData.equals("ФТ201_2_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ201_2")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ201_2");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ401_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ401")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ401");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ403_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ403")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ403");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ404_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ404")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ404");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ406_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ406")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ406");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ414_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ414")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ414");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ416_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ416")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ416");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ417_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ417")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ417");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ419_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ419")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ419");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
+
+            } else if (callbackData.equals("ФТ425_BUTTON")) {
+
+                if (cameraRepository.existsById("ФТ425")) {
+
+                    SendMessage message = new SendMessage();
+                    String text = clearAnswerText("ФТ425");
+                    message.setChatId(String.valueOf(chatId));
+                    message.setText(text);
+
+                    executeMessage(message);
+
+                }
 
             }
 
@@ -1751,6 +2110,18 @@ public class TelegramBot extends TelegramLongPollingBot {
         catch (TelegramApiException e) {
             log.error("Error occurred: " + e.getMessage());
         }
+
+    }
+
+    private String clearAnswerText(String text) {
+
+        Pattern pattern = Pattern.compile("[A-z]");
+
+        String str = String.valueOf(cameraRepository.findById(text));
+
+        Matcher matcher = pattern.matcher(str);
+
+        return matcher.replaceAll("");
 
     }
 }
